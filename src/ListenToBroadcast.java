@@ -1,10 +1,11 @@
 import java.net.ServerSocket;
 import java.net.Socket;
 
+@SuppressWarnings({"InfiniteLoopStatement", "resource"})
 public class ListenToBroadcast extends Thread {
 
-    int port = 0;
-    Site localSite = null;
+    int port;
+    Site localSite;
 
     public ListenToBroadcast(Site thisSite, int port) {
         this.port = port;
@@ -22,7 +23,5 @@ public class ListenToBroadcast extends Thread {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
     }
-
 }
